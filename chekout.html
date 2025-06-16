@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Subscription | NOBUNDLER</title>
+    <style>
+        :root {
+            --primary: #6C5CE7;
+            --dark: #2D3436;
+            --light: #F5F6FA;
+            --success: #00B894;
+            --error: #D63031;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        /* Header */
+        .checkout-header {
+            grid-column: 1 / -1;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        .progress-steps {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 0 30px;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .step.active .step-number {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .step.completed .step-number {
+            background-color: var(--success);
+            color: white;
+        }
+
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 18px;
+            left: 66px;
+            width: calc(100% - 72px);
+            height: 2px;
+            background-color: #e0e0e0;
+        }
+
+        /* Order Summary */
+        .order-summary {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .order-summary h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .product-card {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #f3f3f3;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .product-icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .price-summary {
+            margin-top: 20px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .total {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Checkout Form */
+        .checkout-form {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .payment-method {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .payment-method.selected {
+            border-color: var(--primary);
+            background-color: rgba(108, 92, 231, 0.05);
+        }
+
+        .payment-method img {
+            height: 25px;
+            margin-bottom: 10px;
+        }
+
+        .card-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .expiry-cvv {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .security-badge img {
+            height: 30px;
+        }
+
+        .btn-subscribe {
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-subscribe:hover {
+            background-color: #5649c0;
+        }
+
+        .guarantee {
+            text-align: center;
+            margin-top: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .card-details,
+            .expiry-cvv {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="checkout-header">
+            <div class="logo">NOBUNDLER</div>
+            <div class="progress-steps">
+                <div class="step completed">
+                    <div class="step-number">1</div>
+                    <div>Cart</div>
+                </div>
+                <div class="step active">
+                    <div class="step-number">2</div>
+                    <div>Checkout</div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>Confirmation</div>
+                </div>
+            </div>
+        </header>
+
+        <section class="order-summary">
+            <h2>Your Subscription</h2>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <img src="https://cdn.prod.website-files.com/684b6224a3b67b1aeb8cef0a/684bc677869fd30b1312467d_download.png"
+                        alt="Netflix">
+                </div>
+                <div>
+                    <h3>Netflix Premium</h3>
+                    <p>₦2000/month - billed monthly</p>
+                    <p style="color: var(--success); margin-top: 5px;">✓ 2 devices, HD quality</p>
+                </div>
+            </div>
+
+            <div class="price-summary">
+                <div class="price-row">
+                    <span>Subtotal</span>
+                    <span>₦2000</span>
+                </div>
+                <div class="price-row">
+                    <span>Discount</span>
+                    <span>-₦1000</span>
+                </div>
+                <div class="price-row total">
+                    <span>Total</span>
+                    <span>₦1000</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 14px; color: #666;">
+                You can cancel anytime from your account settings. Next billing date: <strong>July 15, 2025</strong>
+            </p>
+        </section>
+
+        <section class="checkout-form">
+            <h2>Payment Information</h2>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="customer@example.com" readonly>
+            </div>
+
+            <div class="payment-methods">
+                <div class="payment-method selected">
+                    <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Credit Card">
+                    <div>Credit Card</div>
+                </div>
+                <div class="payment-method">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174861.png" alt="PayPal">
+                    <div>PayPal</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+            </div>
+
+            <div class="form-group">
+                <label for="card-name">Name on Card</label>
+                <input type="text" id="card-name" placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label>Expiry & Security</label>
+                <div class="expiry-cvv">
+                    <input type="text" placeholder="MM/YY">
+                    <input type="text" placeholder="CVV">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country">
+                    <option>Nigeria</option>
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                </select>
+            </div>
+
+            <div class="security-badge">
+                <img src="https://cdn-icons-png.flaticon.com/512/2889/2889676.png" alt="SSL Secure">
+                <span>Your payment is 100% secure. We don't store your card details.</span>
+            </div>
+
+            <button class="btn-subscribe">Subscribe Now - ₦1000/month</button>
+
+            <p class="guarantee">7-day money back guarantee • Cancel anytime</p>
+        </section>
+    </div>
+</body>
+
+</html>

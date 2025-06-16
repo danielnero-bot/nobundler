@@ -1,0 +1,124 @@
+:root {
+    --primary-bg: #161616;
+    --secondary-bg: #292929;
+    --primary-text: #f8f8f8;
+    --accent: #f983e2;
+    --accent-hover: #f75cd9;
+    --spotify: #1db954;
+    --netflix: #e50914;
+    --capcut: #000;
+    --youtube: #ff0000;
+  }
+  
+  body {
+      background: var(--primary-bg);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--primary-text);
+  }
+  
+  .plans-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: var(--secondary-bg);
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  }
+  
+  .plans-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: var(--accent);
+      letter-spacing: 1px;
+  }
+  
+  .plans-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+  }
+  
+  .plan-card {
+      background: var(--primary-bg);
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+      padding: 32px 24px;
+      width: 240px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 2px solid var(--secondary-bg);
+  }
+  
+  .plan-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 6px 24px rgba(249,131,226,0.12);
+      border-color: var(--accent);
+  }
+  
+  .plan-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 18px;
+      background: var(--secondary-bg);
+      border-radius: 50%;
+      padding: 10px;
+  }
+  
+  .plan-card h2 {
+      margin: 12px 0 10px 0;
+      font-size: 1.4rem;
+      color: var(--primary-text);
+  }
+  
+  .plan-card p {
+      color: #cccccc;
+      font-size: 1rem;
+      margin-bottom: 16px;
+  }
+  
+  .plan-price {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 18px;
+      color: var(--accent);
+  }
+  
+  .plan-btn {
+      background: var(--accent);
+      color: var(--primary-bg);
+      border: none;
+      border-radius: 22px;
+      padding: 10px 28px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+  }
+  
+  .plan-btn:hover {
+      background: var(--accent-hover);
+      color: var(--primary-text);
+  }
+  
+  .plan-card.spotify .plan-btn:hover {
+      background: var(--spotify);
+      color: var(--primary-bg);
+  }
+  .plan-card.netflix .plan-btn:hover {
+      background: var(--netflix);
+      color: var(--primary-text);
+  }
+  .plan-card.capcut .plan-btn:hover {
+      background: var(--capcut);
+      color: var(--primary-text);
+  }
+  .plan-card.youtube .plan-btn:hover {
+      background: var(--youtube);
+      color: var(--primary-text);
+  }
