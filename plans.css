@@ -88,6 +88,38 @@
       margin-bottom: 18px;
       color: var(--accent);
   }
+@media screen and (max-width:600px) {
+      .plans-container {
+        max-width: 100%;
+        padding: 10px;
+        border-radius: 0;
+      }
+    
+      .plans-title {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+      }
+    
+      .plans-list {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+      }
+    
+      .plan-card {
+        width: 95%;
+        padding: 20px 10px;
+      }
+    
+      .plan-logo {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 12px;
+      }  
+      .plans-list{
+          display: block;
+      }
+  }
   
   .plan-btn {
       background: var(--accent);
@@ -122,3 +154,4 @@
       background: var(--youtube);
       color: var(--primary-text);
   }
+/* Responsive Styles */
