@@ -8832,6 +8832,8 @@ img {
     grid-column-end: 7;
   }
 }
-@media screen and (max-width:600px) {
+/* 
+/* Mobile Styles 
+@media (max-width: 600px) {
   
-}
+} */
