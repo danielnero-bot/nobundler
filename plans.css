@@ -1,157 +1,193 @@
 :root {
-    --primary-bg: #161616;
-    --secondary-bg: #292929;
-    --primary-text: #f8f8f8;
-    --accent: #f983e2;
-    --accent-hover: #f75cd9;
-    --spotify: #1db954;
-    --netflix: #e50914;
-    --capcut: #000;
-    --youtube: #ff0000;
-  }
-  
-  body {
-      background: var(--primary-bg);
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: var(--primary-text);
-  }
-  
-  .plans-container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background: var(--secondary-bg);
-      border-radius: 18px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-  }
-  
-  .plans-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      color: var(--accent);
-      letter-spacing: 1px;
-  }
-  
-  .plans-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-  }
-  
-  .plan-card {
-      background: var(--primary-bg);
-      border-radius: 18px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-      padding: 32px 24px;
-      width: 240px;
-      text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-      border: 2px solid var(--secondary-bg);
-  }
-  
-  .plan-card:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 6px 24px rgba(249,131,226,0.12);
-      border-color: var(--accent);
-  }
-  
-  .plan-logo {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-      margin-bottom: 18px;
-      background: var(--secondary-bg);
-      border-radius: 50%;
-      padding: 10px;
-  }
-  
-  .plan-card h2 {
-      margin: 12px 0 10px 0;
-      font-size: 1.4rem;
-      color: var(--primary-text);
-  }
-  
-  .plan-card p {
-      color: #cccccc;
-      font-size: 1rem;
-      margin-bottom: 16px;
-  }
-  
-  .plan-price {
-      display: block;
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin-bottom: 18px;
-      color: var(--accent);
-  }
-@media screen and (max-width:600px) {
-      .plans-container {
-        max-width: 100%;
+    --nobundler-bg-primary: #161616;
+    --nobundler-bg-secondary: #292929;
+    --nobundler-bg-inverse: #f8f8f8;
+    --nobundler-accent: #f983e2;
+    --nobundler-accent-hover: #f75cd9;
+    --nobundler-spotify: #1db954;
+    --nobundler-netflix: #e50914;
+    --nobundler-capcut: #000;
+    --nobundler-youtube: #ff0000;
+    --nobundler-light-text: #cccccc;
+}
+
+body {
+    background: var(--nobundler-bg-primary);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--nobundler-bg-inverse);
+}
+
+.plans-container {
+    /* max-width: 1000px; */
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--nobundler-bg-secondary);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+
+.plans-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--nobundler-accent);
+    letter-spacing: 1px;
+}
+
+.plans-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.plan-card {
+    background: var(--nobundler-bg-primary);
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    padding: 32px 24px;
+    width: 240px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid var(--nobundler-bg-secondary);
+}
+
+.plan-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(249,131,226,0.12);
+    border-color: var(--nobundler-accent);
+}
+
+.plan-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 18px;
+    background: var(--nobundler-bg-secondary);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.plan-card h2 {
+    margin: 12px 0 10px 0;
+    font-size: 1.4rem;
+    color: var(--nobundler-bg-inverse);
+}
+
+.plan-card p {
+    color: var(--nobundler-light-text);
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.plan-price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: var(--nobundler-accent);
+}
+
+.plan-btn {
+    background: var(--nobundler-accent);
+    color: var(--nobundler-bg-primary);
+    border: none;
+    border-radius: 22px;
+    padding: 10px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.plan-btn:hover {
+    background: var(--nobundler-accent-hover);
+    color: var(--nobundler-bg-inverse);
+}
+
+.plan-card.spotify .plan-btn:hover {
+    background: var(--nobundler-spotify);
+    color: var(--nobundler-bg-primary);
+}
+.plan-card.netflix .plan-btn:hover {
+    background: var(--nobundler-netflix);
+    color: var(--nobundler-bg-inverse);
+}
+.plan-card.capcut .plan-btn:hover {
+    background: var(--nobundler-capcut);
+    color: var(--nobundler-bg-inverse);
+}
+.plan-card.youtube .plan-btn:hover {
+    background: var(--nobundler-youtube);
+    color: var(--nobundler-bg-inverse);
+}
+.checkout-container{
+    display: flex;
+    justify-content: center;
+}
+
+.checkout-btn {
+    display: inline-block;
+    margin: 32px auto 0 auto;
+    padding: 14px 36px;
+    background: var(--nobundler-accent);
+    color: var(--nobundler-bg-primary);
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 24px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.checkout-btn:hover {
+    background: var(--nobundler-accent-hover);
+    color: var(--nobundler-bg-inverse);
+    box-shadow: 0 4px 16px rgba(249,131,226,0.15);
+}
+/* Responsive Styles */
+    @media screen and (max-width: 600px) {
+        body{
+        padding: 5px;
+        width: 100%;
+    }
+    .plans-container {
+        margin: 40px auto;
         padding: 10px;
+        width: 90%;
         border-radius: 0;
-      }
-    
-      .plans-title {
+    }
+
+    .plans-title {
         font-size: 1.5rem;
         margin-bottom: 24px;
-      }
-    
-      .plans-list {
+    }
+
+    .plans-list {
+        width: 90%;
         flex-direction: column;
         gap: 18px;
         align-items: center;
-      }
-    
-      .plan-card {
-        width: 95%;
+    }
+
+    .plan-card {
+        width: 100%;
         padding: 20px 10px;
-      }
+        margin-left: 5px;
+    }
     
-      .plan-logo {
+    .plan-logo {
         width: 48px;
         height: 48px;
         margin-bottom: 12px;
-      }  
-      .plans-list{
-          display: block;
-      }
-  }
-  
-  .plan-btn {
-      background: var(--accent);
-      color: var(--primary-bg);
-      border: none;
-      border-radius: 22px;
-      padding: 10px 28px;
-      font-size: 1rem;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.2s, color 0.2s;
-  }
-  
-  .plan-btn:hover {
-      background: var(--accent-hover);
-      color: var(--primary-text);
-  }
-  
-  .plan-card.spotify .plan-btn:hover {
-      background: var(--spotify);
-      color: var(--primary-bg);
-  }
-  .plan-card.netflix .plan-btn:hover {
-      background: var(--netflix);
-      color: var(--primary-text);
-  }
-  .plan-card.capcut .plan-btn:hover {
-      background: var(--capcut);
-      color: var(--primary-text);
-  }
-  .plan-card.youtube .plan-btn:hover {
-      background: var(--youtube);
-      color: var(--primary-text);
-  }
-/* Responsive Styles */
+    }
+    .checkout-btn {
+        width: 90%;
+        padding: 14px 0;
+        font-size: 1rem;
+        margin-top: 24px;}
+    }
