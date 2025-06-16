@@ -152,7 +152,6 @@ body {
 /* Responsive Styles */
     @media screen and (max-width: 600px) {
         body{
-        padding: 5px;
         width: 100%;
     }
     .plans-container {
