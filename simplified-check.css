@@ -2399,7 +2399,7 @@ textarea.w-input, textarea.w-select {
 
 .section {
   padding-top: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---section--section-padding-vertical);
-  /* padding-bottom: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---section--section-padding-vertical); */
+  padding-bottom: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---section--section-padding-vertical);
   background-color: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---background-color--bg-primary);
   color: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---text-color--text-primary);
 }

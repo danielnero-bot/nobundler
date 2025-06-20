@@ -155,6 +155,7 @@ body {
         width: 100%;
     }
     .plans-container {
+        padding-left: 15px;
         margin: 40px auto;
         padding: 10px;
         width: 90%;
