@@ -8590,11 +8590,7 @@ img {
 }
 
 #w-node-_70f2528e-03ba-a81d-8bf5-0073f58e444b-78d0719d.w-node-c3ea1e5e-7c9c-eb38-1f21-dd7efc9b57a6-eb8cef23, #w-node-_6cf004a7-6366-a89a-4b2f-528bc047c91f-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf24220282d-eb8cef23, #w-node-b8f31888-ccd5-373a-1a7d-c2f0ec815187-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf242202835-eb8cef23, #w-node-_481ac7e3-2c4e-6334-bb26-43bfef85019f-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf24220283d-eb8cef23 {
-  
-  display: block;
-  margin-bottom: 5rem;
-  grid-area: span 1 / span 1 / span 1 / span 1;
-}
+  display: block;margin-bottom: 7rem;grid-area: span 1 / span 1 / span 1 / span 1;}
 
 #w-node-b85181dc-9763-b013-ef4c-e4dbfcabf699-fcabf696.w-node-_565c4b0e-336e-632b-459b-8e380dcce631-eb8cef23 {
   align-self: center;
@@ -8838,5 +8834,8 @@ img {
   .flex-horizontal.y-center{
     align-items: start;
     padding-left: 10px;
-  }
+  }.w-layout-grid.grid-layout.desktop-3-column.tablet-1-column.grid-gap-md>.flex-horizontal.flex-vertical.x-center.utility-text-align-center.w-node-cb8393de-8f9d-853a-9b29-aaf242202835-eb8cef23, .flex-horizontal.flex-vertical.x-center.utility-text-align-center.w-node-cb8393de-8f9d-853a-9b29-aaf24220283d-eb8cef23{
+    margin-top: 7rem;
+  }.w-layout-grid.grid-layout.desktop-3-column.tablet-1-column.grid-gap-md>#w-node-_70f2528e-03ba-a81d-8bf5-0073f58e444b-78d0719d.w-node-c3ea1e5e-7c9c-eb38-1f21-dd7efc9b57a6-eb8cef23, #w-node-_6cf004a7-6366-a89a-4b2f-528bc047c91f-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf24220282d-eb8cef23, #w-node-b8f31888-ccd5-373a-1a7d-c2f0ec815187-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf242202835-eb8cef23, #w-node-_481ac7e3-2c4e-6334-bb26-43bfef85019f-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf24220283d-eb8cef23 {
+    margin-bottom: 7rem;
 }
