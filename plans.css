@@ -155,11 +155,15 @@ body {
         width: 100%;
     }
     .plans-container {
-        padding-left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 40px auto;
-        padding: 10px;
+        padding: 10px; 
+        padding-left: 15px;
         width: 90%;
         border-radius: 0;
+        flex-direction: column;
     }
 
     .plans-title {
