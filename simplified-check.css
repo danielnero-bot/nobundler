@@ -1845,7 +1845,11 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-nav[data-collapse="all"] .w-nav-menu {
+<<<<<<< HEAD
   display: none;
+=======
+  display: none; 
+>>>>>>> 642dd4939aa260515515fa0b01bf02f1a8cfdfe1
 }
 
 .w-nav[data-collapse="all"] .w-nav-button, .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
