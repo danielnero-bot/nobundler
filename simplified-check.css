@@ -1845,7 +1845,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-nav[data-collapse="all"] .w-nav-menu {
-  /* display: none; */
+  display: none; 
 }
 
 .w-nav[data-collapse="all"] .w-nav-button, .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
