@@ -1845,7 +1845,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-nav[data-collapse="all"] .w-nav-menu {
-  display: none;
+  /* display: none; */
 }
 
 .w-nav[data-collapse="all"] .w-nav-button, .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
@@ -6502,7 +6502,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .nav-container {
-  max-width: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---container--container-width);
+  /* max-width: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---container--container-width); */
   padding: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---spacing--0-75x) var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---container--container-padding-horizontal);
   border-bottom-left-radius: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---card--card-radius);
   border-bottom-right-radius: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---card--card-radius);
@@ -6512,9 +6512,9 @@ textarea.w-input, textarea.w-select {
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* display: flex; */
 }
 
 .nav-menu {
@@ -7096,12 +7096,10 @@ textarea.w-input, textarea.w-select {
 .nav-menu-full-page {
   z-index: 1;
   text-align: left;
-  justify-content: center;
   align-self: center;
   align-items: center;
   height: 100dvh;
   margin-bottom: 0;
-  display: flex;
   position: fixed;
   inset: 0%;
 }
@@ -8838,4 +8836,83 @@ img {
     margin-top: 7rem;
   }.w-layout-grid.grid-layout.desktop-3-column.tablet-1-column.grid-gap-md>#w-node-_70f2528e-03ba-a81d-8bf5-0073f58e444b-78d0719d.w-node-c3ea1e5e-7c9c-eb38-1f21-dd7efc9b57a6-eb8cef23, #w-node-_6cf004a7-6366-a89a-4b2f-528bc047c91f-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf24220282d-eb8cef23, #w-node-b8f31888-ccd5-373a-1a7d-c2f0ec815187-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf242202835-eb8cef23, #w-node-_481ac7e3-2c4e-6334-bb26-43bfef85019f-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf24220283d-eb8cef23 {
     margin-bottom: 7rem;
+}
+#toTopBtn {
+  right: 16px !important;
+  bottom: 16px !important;
+  padding: 10px 16px !important;
+  font-size: 1rem !important;
 }}
+#toTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 12px 18px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+#toTopBtn:hover {
+  background-color: #555;
+}/* Add this to your CSS file or in a <style> block in index.html */
+
+/* Dark theme for nav */
+.nav,
+.nav-container,
+.nav-menu-full-page,
+.nav-logo,
+.nav-logo-icon {
+  background: var(--nobundler-bg-primary, #161616) !important;
+  color: var(--nobundler-bg-inverse, #f8f8f8) !important;
+}
+
+.nav-menu-full-page.utility-background-inverse.utility-text-inverse.w-nav-menu {
+  background: var(--nobundler-bg-secondary, #292929) !important;
+  color: var(--nobundler-bg-inverse, #f8f8f8) !important;
+}
+
+.nav-logo-icon svg {
+  color: var(--nobundler-accent, #f983e2);
+  fill: var(--nobundler-accent, #f983e2);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.nav-logo-icon svg:hover {
+  color: var(--nobundler-accent-hover, #f75cd9);
+  fill: var(--nobundler-accent-hover, #f75cd9);
+}
+
+.nav-menu-item,
+.footer-link,
+.paragraph-lg,
+.paragraph-xl {
+  color: var(--nobundler-bg-inverse, #f8f8f8) !important;
+}
+
+.button.primary-button-on-accent-primary,
+.button.w-inline-block,
+.button.w-button {
+  background: var(--nobundler-accent, #f983e2);
+  color: var(--nobundler-bg-primary, #161616);
+  border: none;
+  border-radius: 22px;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+.button.primary-button-on-accent-primary:hover,
+.button.w-inline-block:hover,
+.button.w-button:hover {
+  background: var(--nobundler-accent-hover, #f75cd9);
+  color: var(--nobundler-bg-inverse, #f8f8f8);
+}
+
