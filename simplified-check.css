@@ -1845,12 +1845,11 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-nav[data-collapse="all"] .w-nav-menu {
-<<<<<<< HEAD
+<<<<<<<HEAD
   display: none;
-=======
-  display: none; 
+=======display: none; 
 >>>>>>> 642dd4939aa260515515fa0b01bf02f1a8cfdfe1
-}
+;display: none;}
 
 .w-nav[data-collapse="all"] .w-nav-button, .w--nav-dropdown-open, .w--nav-dropdown-toggle-open {
   display: block;
@@ -8868,13 +8867,6 @@ img {
   background-color: #555;
 }/* Add this to your CSS file or in a <style> block in index.html */
 
-/* Dark theme for nav */
-.nav,
-.nav-container,
-.nav-menu-full-page {
-  background: var(--nobundler-bg-primary, #161616) !important;
-  color: var(--nobundler-bg-inverse, #f8f8f8) !important;
-}
 
 
 
