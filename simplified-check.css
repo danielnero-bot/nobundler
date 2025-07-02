@@ -6512,9 +6512,9 @@ textarea.w-input, textarea.w-select {
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
   width: 100%;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  /* display: flex; */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
 }
 
 .nav-menu {
