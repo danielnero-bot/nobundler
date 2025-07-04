@@ -16,3 +16,22 @@ window.onscroll = function() {
   document.getElementById("toTopBtn").onclick = function() {
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const navMenu = document.querySelector('.nav-menu-full-page.utility-background-inverse.utility-text-inverse.w-nav-menu');
+  if (menuBtn && navMenu) {
+      menuBtn.addEventListener('click', function() {
+          navMenu.style.display = 'block';
+      });
+  }
+});
+  document.addEventListener('DOMContentLoaded', function() {
+  const closeBtn = document.getElementById('closeMobileMenu');
+  const navMenu = document.querySelector('.nav-menu-full-page.utility-background-inverse.utility-text-inverse.w-nav-menu');
+  if (closeBtn && navMenu) {
+    closeBtn.style.cursor = 'pointer';
+    closeBtn.addEventListener('click', function() {
+        navMenu.style.display = 'none';
+    });
+}
+});

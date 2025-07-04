@@ -8190,6 +8190,7 @@ img {
 
   .utility-margin-bottom-0 {
     margin-bottom: 0;
+    margin-right: auto;
   }
 
   .utility-padding-bottom-0 {
@@ -8826,6 +8827,9 @@ img {
     grid-column-end: 7;
   }
 }
+.icon.utility-text-inherit, #mobileMenuBtn{
+  display: none;
+}
 
 /* Mobile Styles */
 @media (max-width: 600px) {
@@ -8842,7 +8846,11 @@ img {
   bottom: 16px !important;
   padding: 10px 16px !important;
   font-size: 1rem !important;
-}}
+}
+.icon.utility-text-inherit, #mobileMenuBtn{
+  display: block;
+}
+}
 #toTopBtn {
   display: none; /* Hidden by default */
   position: fixed;
