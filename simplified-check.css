@@ -6502,7 +6502,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .nav-container {
-  /* max-width: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---container--container-width); */
+  max-width: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---container--container-width);
   padding: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---spacing--0-75x) var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---container--container-padding-horizontal);
   border-bottom-left-radius: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---card--card-radius);
   border-bottom-right-radius: var(--nobundler-82921b10-4b39-48f0-b346-808cf4903d29-1749770792616---card--card-radius);
