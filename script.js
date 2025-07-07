@@ -35,3 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 }
 });
+// File: check-vpn.js
+
+async function fetchData() {
+  const response = await fetch('https://iplocate.io/api/lookup/17.253.0.0?apikey=6f87b02627eeecbfc174bfac42e7d843');
+  const data = await response.json();
+  console.log(data);
+}
+
+fetchData(); // Call the async function
