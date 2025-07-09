@@ -8857,6 +8857,11 @@ img {
 #w-node-_70f2528e-03ba-a81d-8bf5-0073f58e444b-78d0719d.w-node-c3ea1e5e-7c9c-eb38-1f21-dd7efc9b57a6-eb8cef23, #w-node-_6cf004a7-6366-a89a-4b2f-528bc047c91f-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf24220282d-eb8cef23, #w-node-b8f31888-ccd5-373a-1a7d-c2f0ec815187-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf242202835-eb8cef23, #w-node-_481ac7e3-2c4e-6334-bb26-43bfef85019f-e9000322.w-node-cb8393de-8f9d-853a-9b29-aaf24220283d-eb8cef23{
   margin-bottom: 0;
 }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* or as needed */
+  column-gap: 12.5rem; /* Adjust as needed */
+}
 }
 #toTopBtn {
   display: none; /* Hidden by default */
